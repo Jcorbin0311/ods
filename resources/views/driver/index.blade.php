@@ -1,6 +1,7 @@
 <html>    
     @foreach ($drivers as $driver)
-        <div>{{ $driver->name }}, {{ $driver->telephone }}
+        <div>
+            {{ $driver->name }}
         </div>
 
         {!! Form::open(['method'=>'get','route'=>['driver.show',$driver->id]])!!}

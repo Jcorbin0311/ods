@@ -22,3 +22,6 @@ Route::get('/', function () {
 //Route::resource('catalog', CatalogController::class);
 Route::resource('driver', DriverController::class);
 //require __DIR__.'/auth.php';
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
