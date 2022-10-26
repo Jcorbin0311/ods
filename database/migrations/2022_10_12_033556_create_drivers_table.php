@@ -16,9 +16,7 @@ return new class extends Migration
         Schema::create('drivers', function (Blueprint $table) {
             $table->id();
 			$table->string('name');
-			$table->integer('telephone');
-			$table->date('created_at');
-			$table->date('updated_at');
+			$table->string('telephone');
             $table->timestamps();
         });
     }

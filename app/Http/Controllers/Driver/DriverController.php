@@ -9,6 +9,14 @@ use App\Http\Requests\driver\DriverRequest;
 
 class DriverController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('driver.access:ODSAdmin,Driver')
+            ->only(['index', 'show']);
+
+        $this->middleware('driver.access:ODSAdmin,NULL')
+            ->only([ 'create', 'store', 'edit', 'update', 'delete']);
+    }
     /**
      * Display a listing of the resource.
      *
