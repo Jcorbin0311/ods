@@ -11,6 +11,12 @@
                 <div class="p-6 bg-white border-b border-gray-200">
 
                     You plug in bruv!
+
+                    @section('content')
+                    @if(Session::has('errmessage'))
+                    <p> Error: {{ Session::get('errmessage') }}</p>
+                    @endif
+                    @endsection
                 </div>
             </div>
         </div>

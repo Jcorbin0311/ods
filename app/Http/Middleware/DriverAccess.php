@@ -17,7 +17,7 @@ class DriverAccess
     public function handle(Request $request, Closure $next, $role1, $role2)
     {
         if(empty($request->user()) ||
-            !($request->user() ->hasRole($role1)
+            !($request->user() ->hasRole($role1) ||
             $request->user()->hasRole($role2))
         )
 
